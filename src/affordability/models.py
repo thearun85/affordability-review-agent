@@ -11,3 +11,9 @@ class LoanApplication:
     loan_term_months: int | None
     annual_interest_rate: Decimal | None
     applicant_note: str
+
+@dataclass(frozen=True)
+class CompletenessResult:
+    is_complete: bool
+    missing_fields: tuple[str, ...]
+    invalid_fields: tuple[str, ...]
