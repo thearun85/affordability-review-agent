@@ -1,0 +1,25 @@
+[project]
+name = "affordability-review-agent"
+version = "0.1.0"
+description = "A controlled agentic workflow for reviewing fictional personal-loan affordability."
+authors = [
+    { name = "Arun Raghunath" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.1.1,<10.0.0)",
+    "ruff (>=0.15.21,<0.16.0)",
+    "mypy (>=2.3.0,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [
+    { include = "affordability", from = "src" }
+]
